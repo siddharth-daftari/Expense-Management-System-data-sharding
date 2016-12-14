@@ -3,6 +3,7 @@
 Steps to run the code :
 
 --- starting 3 mysql instances ---
+
 docker run --name db1 -v /mnt/sda1/var/mysql_data1:/var/lib/mysql -e MYSQL_USER=root -e MYSQL_ROOT_PASSWORD=pass1234 -e MYSQL_ROOT_HOST=% -it -p 3306:3306 -d mysql
 
 docker run --name db2 -v /mnt/sda1/var/mysql_data2:/var/lib/mysql -e MYSQL_USER=root -e MYSQL_ROOT_PASSWORD=pass1234 -e MYSQL_ROOT_HOST=% -it -p 3307:3306 -d mysql
@@ -10,24 +11,40 @@ docker run --name db2 -v /mnt/sda1/var/mysql_data2:/var/lib/mysql -e MYSQL_USER=
 docker run --name db3 -v /mnt/sda1/var/mysql_data3:/var/lib/mysql -e MYSQL_USER=root -e MYSQL_ROOT_PASSWORD=pass1234 -e MYSQL_ROOT_HOST=% -it -p 3308:3306 -d mysql
 
 --- 3 instances of assignment1 ---
+
 cd assignment1App1ForAssign3
+
 docker build -t app1 .
+
 docker run -d -p 5001:5001 --name app1 -e PYTHONUNBUFFERED=0 --link db1:mysql -d app1
+
 cd ..
+
 
 cd assignment1App2ForAssign3
+
 docker build -t app2 .
+
 docker run -d -p 5002:5002 --name app2 -e PYTHONUNBUFFERED=0 --link db2:mysql -d app2
+
 cd ..
+
 
 cd assignment1App3ForAssign3
+
 docker build -t app3 .
+
 docker run -d -p 5003:5003 --name app3 -e PYTHONUNBUFFERED=0 --link db3:mysql -d app3
+
 cd ..
 
+
 --- main program ---
+
 cd assignment3
+
 docker build -t testfile .
+
 docker run -d -p 8000:8000 --name testfile -e PYTHONUNBUFFERED=0 -d testfile
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -532,5 +549,3 @@ request forwarded to instance : 192.168.99.100:5002
 
 
 ---------------------------------------------------------------------------------------------------------------------
-
-
