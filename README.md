@@ -2,6 +2,15 @@
 
 Steps to run the code :
 
+--- mkdir 3 directories at below paths for 3 instances of mysql ---
+
+/mnt/sda1/var/mysql_data1
+
+/mnt/sda1/var/mysql_data2
+
+/mnt/sda1/var/mysql_data3
+
+
 --- starting 3 mysql instances ---
 
 docker run --name db1 -v /mnt/sda1/var/mysql_data1:/var/lib/mysql -e MYSQL_USER=root -e MYSQL_ROOT_PASSWORD=pass1234 -e MYSQL_ROOT_HOST=% -it -p 3306:3306 -d mysql
