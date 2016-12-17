@@ -1,5 +1,7 @@
 # Assignment 3
 
+### GET responses
+
 http://192.168.99.100:5002/v1/expenses/1 200
 {
   "category": "office supplies", 
