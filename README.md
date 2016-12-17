@@ -26,7 +26,7 @@ http://192.168.99.100:5002/v1/expenses/2 200
   "id": 2, 
   "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
   "name": "Foo 2", 
-  "status": "pending|approved|rejected|overbudget",
+  "status": "pending|approved|rejected|overbudget", 
   "submit_date": "12-10-2016"
 }
 
@@ -40,7 +40,7 @@ http://192.168.99.100:5002/v1/expenses/3 200
   "id": 3, 
   "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
   "name": "Foo 3", 
-  "status": "pending|approved|rejected|overbudget",  
+  "status": "pending|approved|rejected|overbudget", 
   "submit_date": "12-10-2016"
 }
 
