@@ -5,7 +5,7 @@
 http://192.168.99.100:5002/v1/expenses/1 200
 {
   "category": "office supplies", 
-  "decision_date": "2016-12-17", 
+  "decision_date": "2016-12-17",
   "description": "iPad for office use", 
   "email": "foo1@bar.com", 
   "estimated_costs": "800", 
