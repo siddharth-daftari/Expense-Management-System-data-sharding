@@ -1,5 +1,149 @@
 # Assignment 3
 
+http://192.168.99.100:5002/v1/expenses/1 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo1@bar.com", 
+  "estimated_costs": "800", 
+  "id": 1, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 1", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5002/v1/expenses/2 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo2@bar.com", 
+  "estimated_costs": "800", 
+  "id": 2, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 2", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5002/v1/expenses/3 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo3@bar.com", 
+  "estimated_costs": "800", 
+  "id": 3, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 3", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5003/v1/expenses/4 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo4@bar.com", 
+  "estimated_costs": "800", 
+  "id": 4, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 4", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5002/v1/expenses/5 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo5@bar.com", 
+  "estimated_costs": "800", 
+  "id": 5, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 5", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5001/v1/expenses/6 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo6@bar.com", 
+  "estimated_costs": "800", 
+  "id": 6, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 6", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5003/v1/expenses/7 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo7@bar.com", 
+  "estimated_costs": "800", 
+  "id": 7, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 7", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5002/v1/expenses/8 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo8@bar.com", 
+  "estimated_costs": "800", 
+  "id": 8, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 8", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5003/v1/expenses/9 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo9@bar.com", 
+  "estimated_costs": "800", 
+  "id": 9, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 9", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+http://192.168.99.100:5002/v1/expenses/10 200
+{
+  "category": "office supplies", 
+  "decision_date": "2016-12-17", 
+  "description": "iPad for office use", 
+  "email": "foo10@bar.com", 
+  "estimated_costs": "800", 
+  "id": 10, 
+  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
+  "name": "Foo 10", 
+  "status": "pending|approved|rejected|overbudget", 
+  "submit_date": "12-10-2016"
+}
+
+
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------
 Steps to run the code :
 
 --- mkdir 3 directories at below paths for 3 instances of mysql ---
@@ -52,13 +196,10 @@ cd ..
 
 cd assignment3
 
-docker build -t testfile .
-
-docker run -d -p 8000:8000 --name testfile -e PYTHONUNBUFFERED=0 -d testfile
-
+python ch_client.py
 ---------------------------------------------------------------------------------------------------------------------
 
-The main program that forwards the requests to one of the instances : 192.168.99.100:8000
+3 instances run at below mentioned ports:
 
 instance 1 of assignment 1 : 192.168.99.100:5001
 
@@ -67,552 +208,3 @@ instance 2 of assignment 1 : 192.168.99.100:5002
 instance 3 of assignment 1 : 192.168.99.100:5003
 
 ---------------------------------------------------------------------------------------------------------------------
-
-POST request1: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5002
-
-	request body:	{
-					    "id" : "1",
-					    "name" : "Foo 1",
-					    "email" : "foo1@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "700",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-						"category": "office supplies", 
-						"decision_date": "2016-12-14", 
-						"description": "iPad for office use", 
-						"email": "foo1@bar.com", 
-						"estimated_costs": "700", 
-						"id": 1, 
-						"link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-						"name": "Foo 1", 
-						"status": "pending|approved|rejected|overbudget", 
-						"submit_date": "12-10-2016"
-					}
-
-GET request1:		http://192.168.99.100:8000/v1/expenses/1
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	response body:	{
-						  "category": "office supplies", 
-						  "decision_date": "2016-12-14", 
-						  "description": "iPad for office use", 
-						  "email": "foo1@bar.com", 
-						  "estimated_costs": "700", 
-						  "id": 1, 
-						  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-						  "name": "Foo 1", 
-						  "status": "pending|approved|rejected|overbudget", 
-						  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request2: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	request body:	{
-					    "id" : "2",
-					    "name" : "Foo 2",
-					    "email" : "foo2@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo2@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 2, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 2", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request2:		http://192.168.99.100:8000/v1/expenses/2
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo2@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 2, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 2", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request3: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	request body:	{
-					    "id" : "3",
-					    "name" : "Foo 3",
-					    "email" : "foo3@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo3@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 3, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 3", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request3:		http://192.168.99.100:8000/v1/expenses/3
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo3@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 3, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 3", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request4: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5003
-	
-	request body:	{
-					    "id" : "4",
-					    "name" : "Foo 4",
-					    "email" : "foo4@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo4@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 4, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 4", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request4:		http://192.168.99.100:8000/v1/expenses/4
-
-request forwarded to instance : 192.168.99.100:5003
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo4@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 4, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 4", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request5: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	request body:	{
-					    "id" : "5",
-					    "name" : "Foo 5",
-					    "email" : "foo5@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo5@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 5, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 5", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request5:		http://192.168.99.100:8000/v1/expenses/5
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo5@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 5, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 5", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request6: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5001
-	
-	request body:	{
-					    "id" : "6",
-					    "name" : "Foo 6",
-					    "email" : "foo6@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo6@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 6, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 6", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request6:		http://192.168.99.100:8000/v1/expenses/6
-
-request forwarded to instance : 192.168.99.100:5001
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo6@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 6, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 6", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request7: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5003
-	
-	request body:	{
-					    "id" : "7",
-					    "name" : "Foo 7",
-					    "email" : "foo7@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo7@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 7, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 7", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request7:		http://192.168.99.100:8000/v1/expenses/7
-
-request forwarded to instance : 192.168.99.100:5003
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo7@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 7, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 7", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request8: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	request body:	{
-					    "id" : "8",
-					    "name" : "Foo 8",
-					    "email" : "foo8@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo8@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 8, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 8", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request8:		http://192.168.99.100:8000/v1/expenses/8
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo8@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 8, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 8", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request9: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5003
-	
-	request body:	{
-					    "id" : "9",
-					    "name" : "Foo 9",
-					    "email" : "foo9@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo9@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 9, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 9", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request9:		http://192.168.99.100:8000/v1/expenses/9
-
-request forwarded to instance : 192.168.99.100:5003
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo9@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 9, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 9", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-POST request10: 		http://192.168.99.100:8000/v1/expenses
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	request body:	{
-					    "id" : "10",
-					    "name" : "Foo 10",
-					    "email" : "foo10@bar.com",
-					    "category" : "office supplies",
-					    "description" : "iPad for office use",
-					    "link" : "http://www.apple.com/shop/buy-ipad/ipad-pro",
-					    "estimated_costs" : "800",
-					    "submit_date" : "12-10-2016"
-					}
-
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo10@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 10, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 10", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-GET request10:		http://192.168.99.100:8000/v1/expenses/10
-
-request forwarded to instance : 192.168.99.100:5002
-	
-	
-	response body:	{
-					  "category": "office supplies", 
-					  "decision_date": "2016-12-14", 
-					  "description": "iPad for office use", 
-					  "email": "foo10@bar.com", 
-					  "estimated_costs": "800", 
-					  "id": 10, 
-					  "link": "http://www.apple.com/shop/buy-ipad/ipad-pro", 
-					  "name": "Foo 10", 
-					  "status": "pending|approved|rejected|overbudget", 
-					  "submit_date": "12-10-2016"
-					}
-
-
----------------------------------------------------------------------------------------------------------------------
-
-
---- docker logs for main program (testfile) ---
-
-
-```
-#!python
-
-192.168.99.1 - - [14/Dec/2016 09:09:48] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses/1
-http://192.168.99.100:5002/v1/expenses/1 200
-192.168.99.1 - - [14/Dec/2016 09:12:46] "GET /v1/expenses/1 HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:16:08] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses/2
-http://192.168.99.100:5002/v1/expenses/2 200
-192.168.99.1 - - [14/Dec/2016 09:16:55] "GET /v1/expenses/2 HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:17:37] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses/3
-http://192.168.99.100:5002/v1/expenses/3 200
-192.168.99.1 - - [14/Dec/2016 09:18:24] "GET /v1/expenses/3 HTTP/1.1" 200 -
-http://192.168.99.100:5003/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:19:17] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5003/v1/expenses/4
-http://192.168.99.100:5003/v1/expenses/4 200
-192.168.99.1 - - [14/Dec/2016 09:19:52] "GET /v1/expenses/4 HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:20:26] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses/5
-http://192.168.99.100:5002/v1/expenses/5 200
-192.168.99.1 - - [14/Dec/2016 09:21:02] "GET /v1/expenses/5 HTTP/1.1" 200 -
-http://192.168.99.100:5001/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:21:45] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5001/v1/expenses/6
-http://192.168.99.100:5001/v1/expenses/6 200
-192.168.99.1 - - [14/Dec/2016 09:22:13] "GET /v1/expenses/6 HTTP/1.1" 200 -
-http://192.168.99.100:5003/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:22:45] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5003/v1/expenses/7
-http://192.168.99.100:5003/v1/expenses/7 200
-192.168.99.1 - - [14/Dec/2016 09:23:12] "GET /v1/expenses/7 HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:23:46] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses/8
-http://192.168.99.100:5002/v1/expenses/8 200
-192.168.99.1 - - [14/Dec/2016 09:24:14] "GET /v1/expenses/8 HTTP/1.1" 200 -
-http://192.168.99.100:5003/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:24:52] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5003/v1/expenses/9
-http://192.168.99.100:5003/v1/expenses/9 200
-192.168.99.1 - - [14/Dec/2016 09:25:20] "GET /v1/expenses/9 HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses
-192.168.99.1 - - [14/Dec/2016 09:25:51] "POST /v1/expenses HTTP/1.1" 200 -
-http://192.168.99.100:5002/v1/expenses/10
-http://192.168.99.100:5002/v1/expenses/10 200
-192.168.99.1 - - [14/Dec/2016 09:26:17] "GET /v1/expenses/10 HTTP/1.1" 200 -
-```
