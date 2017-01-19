@@ -210,3 +210,8 @@ instance 2 of assignment 1 : 192.168.99.100:5002
 instance 3 of assignment 1 : 192.168.99.100:5003
 
 ---------------------------------------------------------------------------------------------------------------------
+
+License
+=======
+
+This project is released under the [MIT License](https://github.com/siddharth-daftari/Expense-Management-System-data-sharding/blob/master/LICENSE.txt).
